@@ -1,0 +1,109 @@
+body {
+font-family: Arial, sans-serif;
+margin: 0;
+padding: 0;
+}
+header {
+background: #1e7f5c;
+color: white;
+padding: 15px;
+}
+nav a {
+color: white;
+margin-right: 15px;
+text-decoration: none;
+}
+main {
+padding: 20px;
+}
+footer {
+background: #f2f2f2;
+text-align: center;
+padding: 10px;
+}
+nav a.active {
+    color: #facc15;
+}
+
+nav a.active::after {
+    width: 100%;
+}
+nav a {
+    position: relative;
+    color: #e5e7eb;
+    margin: 0 12px;
+    text-decoration: none;
+    font-weight: 500;
+    padding-bottom: 6px;
+    transition: color 0.3s ease;
+}
+
+nav a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0%;
+    height: 3px;
+    background: linear-gradient(90deg, #facc15, #fde68a);
+    border-radius: 5px;
+    transition: width 0.35s ease;
+}
+
+nav a:hover {
+    color: #facc15;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+/* KONTAK ICON REPLACER */
+.bg-content p {
+    position: relative;
+    padding-left: 34px;
+    line-height: 1.8;
+}
+
+/* ALAMAT */
+.bg-content p:nth-of-type(1)::before {
+    content: "\f3c5"; /* location-dot */
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    position: absolute;
+    left: 0;
+    top: 4px;
+    color: #facc15;
+}
+
+/* YOUTUBE */
+.bg-content p:nth-of-type(2)::before {
+    content: "\f167"; /* youtube */
+    font-family: "Font Awesome 6 Brands";
+    font-weight: 400;
+    position: absolute;
+    left: 0;
+    top: 4px;
+    color: #ff0000;
+}
+
+/* INSTAGRAM */
+.bg-content p:nth-of-type(3)::before {
+    content: "\f16d"; /* instagram */
+    font-family: "Font Awesome 6 Brands";
+    font-weight: 400;
+    position: absolute;
+    left: 0;
+    top: 4px;
+    color: #e1306c;
+}
+
+/* LINK STYLE */
+.bg-content a {
+    color: #facc15;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.bg-content a:hover {
+    text-decoration: underline;
+}
