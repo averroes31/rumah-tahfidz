@@ -6,89 +6,100 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
 <style>
-/* HERO SECTION */
-.hero {
-    min-height: 90vh;
-    display: flex;
-    align-items: center;
-    background: url('/assets/img/rumah-tahfidz.jpg.jpg') center/cover no-repeat;
+/* RESET */
+* {
+    box-sizing: border-box;
 }
 
-/* HERO OVERLAY */
+/* HERO */
+.hero {
+    min-height: 100vh;
+    background: url('/assets/img/rumah-tahfidz.jpg.jpg') center center / cover no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* OVERLAY */
 .hero-overlay {
     width: 100%;
-    padding: 90px 20px;
+    min-height: 100vh;
+    background: rgba(0,0,0,0.65);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
 }
 
+/* CONTENT */
 .hero-content {
     max-width: 900px;
-    margin: auto;
     text-align: center;
     color: #ffffff;
     animation: fadeUp 1.3s ease forwards;
 }
 
+/* ICON */
 .hero-icon {
     font-size: 60px;
     color: #facc15;
-    margin-bottom: 18px;
+    margin-bottom: 15px;
 }
 
+/* TITLE */
 .hero-content h2 {
-    font-size: 44px;
+    font-size: 40px;
     font-weight: 700;
-    margin-bottom: 15px;
-    letter-spacing: 1px;
+    margin-bottom: 12px;
     color: #facc15;
 }
 
+/* SUBTITLE */
 .hero-content .subtitle {
     font-size: 18px;
-    margin-bottom: 32px;
+    margin-bottom: 25px;
     font-style: italic;
-    color: #ffffff;
 }
 
+/* TEXT */
 .hero-content p {
     font-size: 16px;
-    line-height: 1.9;
-    margin-bottom: 18px;
-    color: #ffffff;
+    line-height: 1.8;
+    margin-bottom: 15px;
 }
 
-/* FEATURE ICONS */
+/* FEATURES */
 .hero-features {
     display: flex;
     justify-content: center;
-    gap: 30px;
-    margin: 45px 0;
+    gap: 25px;
+    margin-top: 40px;
     flex-wrap: wrap;
 }
 
 .feature-item {
-    background: rgba(0, 0, 0, 0.45);
-    padding: 25px 22px;
-    border-radius: 18px;
+    background: rgba(0, 0, 0, 0.55);
+    padding: 22px;
+    border-radius: 16px;
     width: 220px;
-    backdrop-filter: blur(4px);
+    backdrop-filter: blur(5px);
     transition: 0.3s;
 }
 
 .feature-item:hover {
-    transform: translateY(-6px);
-    background: rgba(0, 0, 0, 0.6);
+    transform: translateY(-5px);
+    background: rgba(0, 0, 0, 0.75);
 }
 
 .feature-item i {
-    font-size: 34px;
+    font-size: 32px;
     color: #facc15;
     margin-bottom: 10px;
 }
 
 .feature-item h4 {
     font-size: 16px;
-    color: #ffffff;
-    margin-bottom: 6px;
+    margin-bottom: 5px;
 }
 
 .feature-item p {
@@ -96,11 +107,35 @@
     color: #e5e7eb;
 }
 
+/* MOBILE */
+@media (max-width: 768px) {
+    .hero-content h2 {
+        font-size: 26px;
+    }
+
+    .hero-content .subtitle {
+        font-size: 15px;
+    }
+
+    .hero-content p {
+        font-size: 14px;
+    }
+
+    .hero-features {
+        gap: 15px;
+    }
+
+    .feature-item {
+        width: 100%;
+        max-width: 280px;
+    }
+}
+
 /* ANIMATION */
 @keyframes fadeUp {
     from {
         opacity: 0;
-        transform: translateY(55px);
+        transform: translateY(40px);
     }
     to {
         opacity: 1;
@@ -135,7 +170,6 @@
                 yang siap mengamalkan nilai-nilai Islam dalam kehidupan.
             </p>
 
-            <!-- FEATURE ICONS -->
             <div class="hero-features">
                 <div class="feature-item">
                     <i class="fas fa-book-quran"></i>
